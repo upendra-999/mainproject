@@ -1,0 +1,21 @@
+{%extends 'app7/base.html'%}
+{%block body_block%}
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+ <body>
+
+<center>
+	<h2>SignUp Here</h2>
+	<form method="POST">
+		{{form.as_p}}
+		{%csrf_token%}
+		<button>SignUp</button>
+	</form>
+</center>
+
+{%endblock%}
+</body>
+</html>

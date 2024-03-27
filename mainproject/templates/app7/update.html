@@ -1,0 +1,26 @@
+{% extends 'app7/base.html' %}
+{%block body_block%}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <center>
+        <h1>Update page</h1>
+        <form method="POST">
+            {%csrf_token%}
+        EMP NAME <input type="text" name="ename" value="{{employee.ename}}"><br>
+        EMP ID  <input type="text" name="eid" value="{{employee.eid}}"><br>
+        EMP DES <input type="text" name="edes" value="{{employee.edes}}"><br>
+        EMP DATE<input type="text" name="edate" value="{{employee.edate}}"><br>
+        EMP DEPT<input type="text" name="edept" value="{{employee.edept}}"><br>
+        EMP SAL<input type="text" name="esal" value="{{employee.esal}}"><br>
+        EMP Exp<input type="text" name="eexp" value="{{employee.eexp}}"><br>
+        <button>Update</button>
+    </form>
+
+     {% endblock %}
+     </center>
+    </body>
+</html>

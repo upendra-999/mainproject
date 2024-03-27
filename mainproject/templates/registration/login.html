@@ -1,0 +1,20 @@
+{% extends 'app7/base.html' %}
+{%block body_block%}
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <center>
+        <h5>HR MANAGER REQUIRED LOGIN TO ENTER HIS SECTION</h5><br><br><br>
+        <form method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button>Login</button>
+        </form>
+        </center>
+     {% endblock %}
+     
+    </body>
+</html>

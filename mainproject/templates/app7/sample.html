@@ -1,0 +1,45 @@
+{% extends 'app7/base.html' %}
+{%block body_block%}
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{%static "css/style2.css" %}">
+</head>
+<center>
+<body>
+<h2>EMPLOYEE INFORMATION</h2>
+<table border='2'>
+<thead>
+	<th>Emp Name</th>
+	<th>Emp ID</th>
+	<th>Emp Designtation</th>
+	<th>Emp Date Of Joining</th>
+    <th>Emp Department</th>
+    <th>Emp Sal Pak</th>
+	<th>Emp Exp</th>
+    <th>Emp HR Section</th>
+</thead>
+{% for i in e %}
+<tr>
+	<td>{{i.ename}}</td>
+	<td>{{i.eid}}</td>
+	<td>{{i.edes}}</td>
+	<td>{{i.edate}}</td>
+    <td>{{i.edept}}</td>
+    <td>{{i.esal}}</td>
+    <td>{{i.eexp}}</td>
+	<td><a href="/update/{{i.id}}"><button>Update</button></a> <a href="/delete/{{i.id}}"><button>Delete</button></a></td>
+	
+</tr>
+ {%endfor%}
+</table>
+<br></br>
+<a href="/form">  <button>ADD EMPLOYEE</button> </a>
+<a href="/hrm"><button>BACK TO HR MANAGER</button></a>
+{% endblock %}
+</body>
+</center>
+</html>

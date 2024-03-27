@@ -1,0 +1,21 @@
+{% extends 'app7/base.html' %}
+{%block body_block%}
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{%static "css/style3.css" %}">
+    </head>
+    <body>
+        <h1>ADD HOLIDAYS</h1>
+        <center>
+            <form method="POST">
+                {{f.as_p}}
+                {%csrf_token%}
+                <input type="Submit" value="submit">
+            </form>
+        </center>
+
+     {% endblock %}
+    </body>
+</html>

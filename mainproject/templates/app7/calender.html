@@ -1,0 +1,31 @@
+{% extends 'app7/base.html' %}
+{%block body_block%}
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{%static "css/style3.css" %}">
+    </head>
+    <body>
+        <center>
+        <h1>HOLIDAYS CALENDER</h1>
+        <table border="2">
+            <thead>
+                
+                <th>DATE</th>
+                <th>DETAILS</th>
+            </thead>
+            {% for i in h %} 
+        <tr>
+            <td>{{i.date}}</td>
+            <td>{{i.occation}}</td>
+        </tr>   
+           {% endfor %}
+
+        </table>
+        <a href="/newsdata"><button>LATEST NEWS</button></a>
+
+     {% endblock %}
+     </center>
+    </body>
+</html>

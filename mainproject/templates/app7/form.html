@@ -1,0 +1,24 @@
+{% extends 'app7/base.html' %}
+{% load static  %}
+{%block body_block%}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{%static "css/style3.css" %}">
+
+</head>
+<center>
+<body>
+<h2>INSERT EMPLOYEE INFORMATION</h2>
+<form method="POST">
+	{{form.as_p}}
+	{%csrf_token%}
+	<input type="submit" value="SUBMIT">
+</form>
+{% endblock %}
+</body>
+</center>
+</html>

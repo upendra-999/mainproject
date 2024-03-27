@@ -1,0 +1,8 @@
+.navbar ul{
+	text-align: right;
+}
+
+
+.navbar li{
+	display: inline-block;
+}
